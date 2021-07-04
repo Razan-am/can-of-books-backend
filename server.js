@@ -13,6 +13,8 @@ const PORT = process.env.PORT || 3001;
 
 app.get('/test', (request, response) => {
 
+  console.log('hello')
+
   // TODO: 
   // STEP 1: get the jwt from the headers
   // STEP 2. use the jsonwebtoken library to verify that it is a valid jwt
