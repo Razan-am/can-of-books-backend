@@ -20,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/testingbooks',
 );
 
 app.get('/books',UserController);
-
+userModel();
 
 
 const client = jwksClient({
