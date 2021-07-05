@@ -30,23 +30,15 @@ const getKey=(header, callback)=>{
       callback(null, signingKey);
     });
 }
-// 'Bearer ;alsdkj;laskd;lkasd;lkl'
 app.get('/authorize',(req,res)=>{
-  console.log(req.headers);
-  try{
-    const token=req.headers.authorization.split(' ')[1];
-    jwt.verify(token,getKey,{},(err,user)=>{
-        if(err){
-            res.send('invalid token');
-        }
-        res.send(user)
-    })
-    res.send(token);
-  }catch(error){
-    res.send(error.message)
-  }
+  const token=req.headers.authorization.split(' ')[1];
+  jwt.verify(token,getKey,{},(err,user)=>{
+      if(err){
+          res.send('invalid token');
+      }
+      res.send(user)
+  })
 });
-
 
 
 

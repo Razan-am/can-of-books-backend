@@ -32,8 +32,8 @@ const getKey=(header, callback)=>{
 }
 // 'Bearer ;alsdkj;laskd;lkasd;lkl'
 app.get('/authorize',(req,res)=>{
-  console.log(req.headers);
   try{
+
     const token=req.headers.authorization.split(' ')[1];
     jwt.verify(token,getKey,{},(err,user)=>{
         if(err){
@@ -43,7 +43,7 @@ app.get('/authorize',(req,res)=>{
     })
     res.send(token);
   }catch(error){
-    res.send(error.message)
+    res.send(error)
   }
 });
 
