@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const BookSchema= require('../model/BookSchema.model')
-
+const userModel=require('./model/User.model');
 
 const userData = new mongoose.Schema({
     email: { type: String },
@@ -25,4 +25,3 @@ const userObject = () => {
 }
 
 module.exports = userModel;
-userModel();

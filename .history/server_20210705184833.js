@@ -1,15 +1,15 @@
 'use strict';
 
 require('dotenv').config();
+const mongoose=require('mongoose')
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
-
-const mongoose=require('mongoose')
+const { request } = require('express');
 const UserController=require('./controller/User.controller');
-
+const UserModel=require('./model/User.model');
 app.use(cors());
 const PORT = process.env.PORT || 3001
 
@@ -20,6 +20,11 @@ mongoose.connect('mongodb://localhost:27017/testingbooks',
 );
 
 app.get('/books',UserController);
+
+
+app.get('/',(req,res)=>{
+  
+})
 
 
 

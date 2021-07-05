@@ -9,7 +9,7 @@ const jwksClient = require('jwks-rsa');
 
 const mongoose=require('mongoose')
 const UserController=require('./controller/User.controller');
-
+const UserModel=require('./model/User.model');
 app.use(cors());
 const PORT = process.env.PORT || 3001
 
@@ -20,6 +20,18 @@ mongoose.connect('mongodb://localhost:27017/testingbooks',
 );
 
 app.get('/books',UserController);
+
+
+app.get('/proof',(req,res)=>{
+  let useremail;
+  useremail=req.query.useremail
+  UserModel.find({email:useremail},(error,user)=>{
+    if (error){
+      res.send(error.message)
+    }
+    res.send(user)
+  })
+})
 
 
 

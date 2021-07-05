@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const BookSchema= require('../model/BookSchema.model')
 
-
 const userData = new mongoose.Schema({
     email: { type: String },
     books: [BookSchema]
@@ -25,4 +24,3 @@ const userObject = () => {
 }
 
 module.exports = userModel;
-userModel();

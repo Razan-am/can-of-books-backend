@@ -159,6 +159,17 @@
       "resolved": "https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.1.tgz",
       "integrity": "sha1-ml9pkFGx5wczKPKgCJaLZOopVdI="
     },
+<<<<<<< HEAD
+=======
+    "axios": {
+      "version": "0.21.1",
+      "resolved": "https://registry.npmjs.org/axios/-/axios-0.21.1.tgz",
+      "integrity": "sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==",
+      "requires": {
+        "follow-redirects": "^1.10.0"
+      }
+    },
+>>>>>>> 2d7db500baea6e6489165b3e77e4b10ddf09f3ce
     "bl": {
       "version": "2.2.1",
       "resolved": "https://registry.npmjs.org/bl/-/bl-2.2.1.tgz",
@@ -190,6 +201,17 @@
         "type-is": "~1.6.17"
       }
     },
+<<<<<<< HEAD
+=======
+    "browser-tabs-lock": {
+      "version": "1.2.14",
+      "resolved": "https://registry.npmjs.org/browser-tabs-lock/-/browser-tabs-lock-1.2.14.tgz",
+      "integrity": "sha512-ssSpCRcvFe4vc098LDnrJOQDfZiG35KhQGB9hthTbwJk5mmUkePwhcMlW61NH3YuIE2Y9uGLqf9yxEBKbaDlaw==",
+      "requires": {
+        "lodash": ">=4.17.21"
+      }
+    },
+>>>>>>> 2d7db500baea6e6489165b3e77e4b10ddf09f3ce
     "bson": {
       "version": "1.1.6",
       "resolved": "https://registry.npmjs.org/bson/-/bson-1.1.6.tgz",
@@ -228,6 +250,14 @@
       "resolved": "https://registry.npmjs.org/cookie-signature/-/cookie-signature-1.0.6.tgz",
       "integrity": "sha1-4wOogrNCzD7oylE6eZmXNNqzriw="
     },
+<<<<<<< HEAD
+=======
+    "core-js": {
+      "version": "3.15.2",
+      "resolved": "https://registry.npmjs.org/core-js/-/core-js-3.15.2.tgz",
+      "integrity": "sha512-tKs41J7NJVuaya8DxIOCnl8QuPHx5/ZVbFo1oKgVl1qHFBBrDctzQGtuLjPpRdNTWmKPH6oEvgN/MUID+l485Q=="
+    },
+>>>>>>> 2d7db500baea6e6489165b3e77e4b10ddf09f3ce
     "core-util-is": {
       "version": "1.0.2",
       "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
@@ -767,6 +797,14 @@
       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
       "integrity": "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag=="
     },
+<<<<<<< HEAD
+=======
+    "promise-polyfill": {
+      "version": "8.2.0",
+      "resolved": "https://registry.npmjs.org/promise-polyfill/-/promise-polyfill-8.2.0.tgz",
+      "integrity": "sha512-k/TC0mIcPVF6yHhUvwAp7cvL6I2fFV7TzF1DuGPI8mBh4QQazf36xCKEHKTZKRysEoTQoQdKyP25J8MPJp7j5g=="
+    },
+>>>>>>> 2d7db500baea6e6489165b3e77e4b10ddf09f3ce
     "prop-types": {
       "version": "15.7.2",
       "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz",

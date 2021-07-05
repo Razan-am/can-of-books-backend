@@ -1,7 +1,7 @@
 const userModel=require('../model/User.model');
 
 const UserController=(req,res)=>{
-  let useremail;
+    let useremail;
   useremail=req.query.useremail
   booksdata=req.query.booksdata
   userModel.find({email:useremail,books:booksdata},(error,user)=>{

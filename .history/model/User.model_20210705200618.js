@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const BookSchema= require('../model/BookSchema.model')
 
-
 const userData = new mongoose.Schema({
     email: { type: String },
     books: [BookSchema]
@@ -20,9 +19,8 @@ const userObject = () => {
             status: 'String'
         }]
     });
-    console.log(data)
+    console.log('user', data)
     data.save();
 }
 
 module.exports = userModel;
-userModel();

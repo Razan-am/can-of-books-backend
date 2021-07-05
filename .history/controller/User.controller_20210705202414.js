@@ -8,7 +8,7 @@ const UserController=(req,res)=>{
     if (error){
       res.send(error.message)
     }
-    res.send(user)
+    res.send('user')
   })
 }
 
