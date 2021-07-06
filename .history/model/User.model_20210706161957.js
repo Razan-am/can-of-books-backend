@@ -88,4 +88,4 @@ const MaysaaSeed = () => {
     return (maysaa);
 }
 
-module.exports = userModel;
+module.exports = MaysaaSeed;

@@ -10,7 +10,7 @@ const userDataDb = new mongoose.Schema({
 
 const userModel = mongoose.model('userDataDb', userDataDb);
 
-const RazanSeed = () => {
+const userSeed = () => {
     const YearOfYes={
         name:'Year Of Yes',
         description:'Authered by Shonda Rhimes',
@@ -28,7 +28,7 @@ const RazanSeed = () => {
     }
     const razan = new userModel({
         email: 'razanalamleh@gmail.com',
-        books: [YearOfYes,TheLittlePrince,BridgetJones]
+        books: [flawsOfPower,artOfWar,mySystem]
     });
     razan.save();
     console.log(razan);
@@ -47,13 +47,13 @@ const montherSeed = () => {
     }
     const TheTaoOfPooh={
         name:'The Tao Of Pooh',
-        description:'Authered by Bemjemain',
+        description:'Authered by zu',
         status:'active'
     }
     
     const munther = new userModel({
         email: 'munther.abdlrahman@gmail.com',
-        books: [TheAlchemist,Brenadette,TheTaoOfPooh]
+        books: [artOfWar,flawsOfPower,mySystem]
     });
 
     munther.save();
@@ -61,31 +61,4 @@ const montherSeed = () => {
     return (munther);
 }
 
-const MaysaaSeed = () => {
-    const TheHappinessProject={
-        name:'The Happeness Project',
-        description:'Authered by Gabrielle',
-        status:'Finish'
-    }
-    const StoriedLife= {
-        name:'The Storied Life of A.J.Fikry',
-        description:'Authered by Zevin',
-        status:'finish'
-    }
-    const WangsVsWorld={
-        name:'The Wangs Vs The Worlds',
-        description:'Authered by Jade ',
-        status:'active'
-    }
-    
-    const maysaa = new userModel({
-        email: 'maysaa@gmail.com',
-        books: [TheHappinessProject,StoriedLife,WangsVsWorld]
-    });
-
-    maysaa.save();
-    console.log('maysaa',maysaa);
-    return (maysaa);
-}
-
-module.exports = userModel;
+module.exports = montherSeed;
