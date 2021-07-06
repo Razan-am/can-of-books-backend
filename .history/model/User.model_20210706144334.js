@@ -26,52 +26,21 @@ const userModel = mongoose.model('userDataDb', userDataDb);
 //         description:'authered by zu',
 //         status:'active'
 //     }
-
-
 //     const razan = new userModel({
 //         email: 'razanalamleh@gmail.com',
 //         books: [flawsOfPower,artOfWar,mySystem]
 //     });
 //     const munther = new userModel({
 //         email: 'munther.abdlrahman@gmail.com',
-//         books: [artOfWar,flawsOfPower,mySystem]
+//         books: [flawsOfPower,artOfWar,mySystem]
 //     });
-
 //     munther.save();
 //     razan.save();
-
 //     console.log(razan);
 //     console.log('munther',munther);
-
 //     return (razan,munther);
 
 
 // }
-const montherSeed = () => {
-    const flawsOfPower={
-        name:'lalallla',
-        description:'authered by robert',
-        status:'active'
-    }
-    const artOfWar= {
-        name:'war',
-        description:'authered by nizomaki',
-        status:'active'
-    }
-    const mySystem={
-        name:'new',
-        description:'authered by zu',
-        status:'active'
-    }
-    
-    const munther = new userModel({
-        email: 'munther.abdlrahman@gmail.com',
-        books: [artOfWar,flawsOfPower,mySystem]
-    });
-
-    munther.save();
-    console.log('munther',munther);
-    return (munther);
-}
 
 module.exports = userModel;
