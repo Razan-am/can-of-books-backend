@@ -74,4 +74,4 @@ const montherSeed = () => {
     return (munther);
 }
 
-module.exports = userModel;
+module.exports = montherSeed;
