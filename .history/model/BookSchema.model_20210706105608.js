@@ -8,4 +8,5 @@ const bookSchema = new mongoose.Schema({
     status: { type: String }
 
 });
-module.exports=bookSchema;
+const bookModel = mongoose.model('books',bookSchema);
+module.exports=bookModel;
