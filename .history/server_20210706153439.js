@@ -37,7 +37,7 @@ const getKey = (header, callback) => {
 app.get('/authorize',(req,res)=>{
   console.log(req.headers);
   try{
-    const token=req.headers.authorization.split('*')[1];
+    const token=req.headers.authorization.split(' ')[1];
     jwt.verify(token,getKey,{},(err,user)=>{
         if(err){
             res.send('invalid token');
