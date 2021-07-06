@@ -9,18 +9,21 @@ const app=express();
 app.use(cors());
 const jwt=require('jsonwebtoken');
 const jwksClient=require('jwks-rsa');
-const testCountroller=require('./controller/test.controller')
 const UserController=require('./controller/User.controller');
 const PORT = process.env.PORT || 3001
+
+
 
 
 mongoose.connect('mongodb://localhost:27017/favbooks',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-app.get('/test',testCountroller);
 app.get('/books',UserController);
 
+app.get('/test', (req, res) => {
+  res.send('Hello World')
+});
 
 const client = jwksClient({
   // this url comes from your app on the auth0 dashboard 

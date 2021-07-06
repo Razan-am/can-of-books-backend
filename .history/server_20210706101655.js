@@ -18,9 +18,9 @@ mongoose.connect('mongodb://localhost:27017/favbooks',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-app.get('/test',testCountroller);
 app.get('/books',UserController);
 
+app.get('/test',testCountroller);
 
 const client = jwksClient({
   // this url comes from your app on the auth0 dashboard 

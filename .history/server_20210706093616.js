@@ -1,30 +1,39 @@
-'use strict'
-
 const express=require('express');
-const cors=require('cors');
-require('dotenv').config();
-const mongoose=require('mongoose');
 const app=express();
-
-app.use(cors());
+const cors=require('cors');
 const jwt=require('jsonwebtoken');
 const jwksClient=require('jwks-rsa');
-const testCountroller=require('./controller/test.controller')
+require('dotenv').config();
+app.use(cors());
+
+const client = jwksClient({
+    jwksuri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`
+  });
+
+const mongoose=require('mongoose')
 const UserController=require('./controller/User.controller');
+
 const PORT = process.env.PORT || 3001
 
 
-mongoose.connect('mongodb://localhost:27017/favbooks',
+
+mongoose.connect('mongodb://localhost:27017/testingbooks',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
-app.get('/test',testCountroller);
 app.get('/books',UserController);
+
 
 
 const client = jwksClient({
   // this url comes from your app on the auth0 dashboard 
   jwksUri: `https://dev-tiek6efc.us.auth0.com/.well-known/jwks.json`
+});
+
+
+
+app.get('/test', (req, res) => {
+  res.send('Hello World')
 });
 
 // this is a ready to use function
@@ -50,6 +59,8 @@ app.get('/authorize',(req,res)=>{
     res.send(error.message)
   }
 });
+
+
 
 
 app.listen(process.env.PORT,()=>{
