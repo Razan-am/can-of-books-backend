@@ -28,7 +28,7 @@ const RazanSeed = () => {
     }
     const razan = new userModel({
         email: 'razanalamleh@gmail.com',
-        books: [YearOfYes,TheLittlePrince,BridgetJones]
+        books: [flawsOfPower,artOfWar,mySystem]
     });
     razan.save();
     console.log(razan);
@@ -88,4 +88,4 @@ const MaysaaSeed = () => {
     return (maysaa);
 }
 
-module.exports = userModel;
+module.exports = montherSeed;

@@ -28,7 +28,7 @@ const RazanSeed = () => {
     }
     const razan = new userModel({
         email: 'razanalamleh@gmail.com',
-        books: [YearOfYes,TheLittlePrince,BridgetJones]
+        books: [flawsOfPower,artOfWar,mySystem]
     });
     razan.save();
     console.log(razan);
@@ -53,7 +53,7 @@ const montherSeed = () => {
     
     const munther = new userModel({
         email: 'munther.abdlrahman@gmail.com',
-        books: [TheAlchemist,Brenadette,TheTaoOfPooh]
+        books: [artOfWar,flawsOfPower,mySystem]
     });
 
     munther.save();
@@ -62,25 +62,25 @@ const montherSeed = () => {
 }
 
 const MaysaaSeed = () => {
-    const TheHappinessProject={
-        name:'The Happeness Project',
-        description:'Authered by Gabrielle',
+    const TheAlchemist={
+        name:'The Alchemist',
+        description:'Authered by Paulo Ceolho',
         status:'Finish'
     }
-    const StoriedLife= {
-        name:'The Storied Life of A.J.Fikry',
-        description:'Authered by Zevin',
-        status:'finish'
+    const Brenadette= {
+        name:'Where You Go Brenadette',
+        description:'Authered by Maria Semple',
+        status:'active'
     }
-    const WangsVsWorld={
-        name:'The Wangs Vs The Worlds',
-        description:'Authered by Jade ',
+    const TheTaoOfPooh={
+        name:'The Tao Of Pooh',
+        description:'Authered by Bemjemain',
         status:'active'
     }
     
     const maysaa = new userModel({
-        email: 'maysaa@gmail.com',
-        books: [TheHappinessProject,StoriedLife,WangsVsWorld]
+        email: 'munther.abdlrahman@gmail.com',
+        books: [artOfWar,flawsOfPower,mySystem]
     });
 
     maysaa.save();
@@ -88,4 +88,4 @@ const MaysaaSeed = () => {
     return (maysaa);
 }
 
-module.exports = userModel;
+module.exports = montherSeed;
