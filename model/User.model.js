@@ -79,7 +79,8 @@ const MaysaaSeed = () => {
     }
     
     const maysaa = new userModel({
-        email: 'maysaa@gmail.com',
+
+        email:'mailto:test@example.com',
         books: [TheHappinessProject,StoriedLife,WangsVsWorld]
     });
 
@@ -88,6 +89,6 @@ const MaysaaSeed = () => {
     return (maysaa);
 }
 
+
 module.exports=userModel
-    
 
