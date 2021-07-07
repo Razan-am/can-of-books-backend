@@ -21,7 +21,7 @@ const userPost =(req,res)=>{
         description,
         status
     }=req.body;
-    // console.log(req.body)
+    console.log(req.body)
     userModel.findOne({email:userEmail},(error,user)=>{
         if(error){
             res.send('user not found');
