@@ -29,7 +29,7 @@ app.get('/books',UserController);
 
 app.post('/books',userPost);
 
-app.delete('/books/:book_idx',userDelete);
+app.delete('/books/:id',userDelete);
 
 const client = jwksClient({
   jwksUri: `https://dev-tiek6efc.us.auth0.com/.well-known/jwks.json`

@@ -13,9 +13,7 @@ const testCountroller=require('./controller/test.controller')
 
 const {
   UserController,
-  userPost,
-  userDelete
-      }=require('./controller/User.controller');
+  userPost}=require('./controller/User.controller');
 
 const PORT = process.env.PORT || 3001
 
@@ -28,8 +26,6 @@ app.get('/test',testCountroller);
 app.get('/books',UserController);
 
 app.post('/books',userPost);
-
-app.delete('/books/:book_idx',userDelete);
 
 const client = jwksClient({
   jwksUri: `https://dev-tiek6efc.us.auth0.com/.well-known/jwks.json`

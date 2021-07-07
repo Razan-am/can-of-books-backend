@@ -2,17 +2,15 @@
 const userSeed=require('../model/User.model');
 const {
     montherSeed,
-    RazanSeed
-}=require('../model/User.model')
+    Raza
+    =require('../model/User.model')
 
 const testCountroller =(req,res)=>{
     // res.send('Hello World');
     // const userObject=userSeed();
     // res.json(userObject)
 
-    // const userObject=montherSeed();
-    const userObject=RazanSeed();
-
+    const userObject=montherSeed();
     res.json(userObject)
 }
 

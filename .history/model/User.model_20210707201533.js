@@ -88,6 +88,7 @@ const MaysaaSeed = () => {
     return (maysaa);
 }
 
-module.exports=userModel
-    
+module.exports={
+    userModel,
+    RazanSeed}
 
