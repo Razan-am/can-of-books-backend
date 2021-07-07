@@ -10,16 +10,10 @@ app.use(cors());
 const jwt=require('jsonwebtoken');
 const jwksClient=require('jwks-rsa');
 const testCountroller=require('./controller/test.controller')
-
-const {
-  UserController,
-  userPost,
-  userDelete
-      }=require('./controller/User.controller');
-
+const UserController=require('./controller/User.controller');
 const PORT = process.env.PORT || 3001
 
-app.use(express.json())
+
 mongoose.connect('mongodb://localhost:27017/favbooks',
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
@@ -27,21 +21,6 @@ mongoose.connect('mongodb://localhost:27017/favbooks',
 app.get('/test',testCountroller);
 app.get('/books',UserController);
 
-app.post('/books',userPost);
-
-app.delete('/books/:book_idx',userDelete);
-
-const client = jwksClient({
-  jwksUri: `https://dev-tiek6efc.us.auth0.com/.well-known/jwks.json`
-});
-
-
-const getKey = (header, callback) => {
-  client.getSigningKey(header.kid, function (err, key) {
-    const signingKey = key.publicKey || key.rsaPublicKey;
-    callback(null, signingKey);
-  });
-}
 
 const client = jwksClient({
   jwksUri: `https://dev-tiek6efc.us.auth0.com/.well-known/jwks.json`
@@ -58,7 +37,7 @@ const getKey = (header, callback) => {
 app.get('/authorize',(req,res)=>{
   console.log(req.headers);
   try{
-    const token=req.headers.authorization.split('*')[1];
+    const token=req.headers.authorization.split(' * ')[1];
     jwt.verify(token,getKey,{},(err,user)=>{
         if(err){
             res.send('invalid token');

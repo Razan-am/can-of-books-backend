@@ -21,7 +21,7 @@ const userPost =(req,res)=>{
         description,
         status
     }=req.body;
-    // console.log(req.body)
+    console.log(req.body)
     userModel.findOne({email:userEmail},(error,user)=>{
         if(error){
             res.send('user not found');
@@ -32,8 +32,8 @@ const userPost =(req,res)=>{
                 status:status
             }
             user.books.push(newBook);
-            // console.log('neww book',newBook);
-            // console.log('user books',user.books);
+            console.log('neww book',newBook);
+            console.log('user books',user.books);
             user.save();
             // console.log(user.books);
             res.json(user.books);
