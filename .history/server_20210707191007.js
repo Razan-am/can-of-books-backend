@@ -29,19 +29,7 @@ app.get('/books',UserController);
 
 app.post('/books',userPost);
 
-app.delete('/books/:book_idx',userDelete);
-
-const client = jwksClient({
-  jwksUri: `https://dev-tiek6efc.us.auth0.com/.well-known/jwks.json`
-});
-
-
-const getKey = (header, callback) => {
-  client.getSigningKey(header.kid, function (err, key) {
-    const signingKey = key.publicKey || key.rsaPublicKey;
-    callback(null, signingKey);
-  });
-}
+app.delete('/books/:id',userPost);
 
 const client = jwksClient({
   jwksUri: `https://dev-tiek6efc.us.auth0.com/.well-known/jwks.json`
