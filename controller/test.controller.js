@@ -7,11 +7,11 @@ const {
 
 const testCountroller =(req,res)=>{
     // res.send('Hello World');
-    // const userObject=userSeed();
+    const userObject=userSeed();
     // res.json(userObject)
 
     // const userObject=montherSeed();
-    const userObject=RazanSeed();
+    // const userObject=RazanSeed();
 
     res.json(userObject)
 }

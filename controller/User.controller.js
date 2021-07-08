@@ -44,10 +44,28 @@ const userPost =(req,res)=>{
     })
 }
 
+// const userDelete =(req,res)=>{
+//     const bookIndex = req.params.book_idx;
+//     const email = req.query
+
+//     userModel.findOne({email:email},(error,user)=>{
+//         if(error){
+//             res.send('user not found');
+//         }else{
+//             user.books.splice(bookIndex,1);
+//             console.log('bookIndex',bookIndex);
+//             console.log('user books',user.books);
+//             user.save();
+//             // res.send(user.books);
+//             res.send('book deleted')
+//         }
+//     })
+// }
+
+
 const userDelete =(req,res)=>{
     const bookIndex = req.params.book_idx;
     const {email} = req.query
-
     userModel.findOne({email:email},(error,user)=>{
         if(error){
             res.send('user not found');
@@ -62,8 +80,26 @@ const userDelete =(req,res)=>{
     })
 }
 
+const updateBook=(req,res)=>{
+    const {email,name,description,status}= req.body;
+    const book_id=Number(req.params.book_idx);
+    userModel.findOne({email:email}, (error, user)=>{
+        if (error) {
+            res.send('user not found');
+        }
+        else{
+            user.books.splice(book_id,1,{name:name,description:description,status:status});
+            user.save();
+            res.send(user.books)
+        }
+    })
+}
+
+
 module.exports={
     UserController,
     userPost,
-    userDelete
+    userDelete,
+    updateBook
+
 }
