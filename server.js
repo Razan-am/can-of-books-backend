@@ -14,7 +14,8 @@ const testCountroller=require('./controller/test.controller')
 const {
   UserController,
   userPost,
-  userDelete
+  userDelete,
+  updateBook
       }=require('./controller/User.controller');
 
 const PORT = process.env.PORT || 3001
@@ -31,7 +32,7 @@ app.post('/books',userPost);
 
 app.delete('/books/:book_idx',userDelete);
 
-
+app.put('/update-books/:book_idx',updateBook);
 
 
 
