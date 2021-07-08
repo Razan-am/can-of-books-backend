@@ -46,7 +46,7 @@ const userPost =(req,res)=>{
 
 const userDelete =(req,res)=>{
     const bookIndex = req.params.book_idx;
-    const {email} = req.query
+    const {email} = req.query.email
 
     userModel.findOne({email:email},(error,user)=>{
         if(error){
